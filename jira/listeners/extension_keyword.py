@@ -33,7 +33,7 @@ class ExtensionKeywordListener(EventListener):
         results.append(
                     ExtensionResultItem(
                         name='Debugging.',
-                        description=get_url,
+                        description="%s?%s" % (url, urllib.parse.urlencode({'q': query})),
                         icon=self.icon_file,
                         on_enter=DoNothingAction()
                     )
