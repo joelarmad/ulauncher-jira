@@ -37,6 +37,7 @@ class ExtensionKeywordListener(EventListener):
                         icon=self.icon_file,
                         on_enter=DoNothingAction()
                     )
+            return RenderResultListAction(results)
         req = request.Request(get_url, headers={'Authorization': 'Basic %s' % token}, method="GET")
 
         result_types = []
